@@ -1,5 +1,6 @@
 # EaseMyStay
-use these data for request body
+##use these data for request body
+
 // user data 1
 // ***************************************************************************
 {
@@ -20,6 +21,8 @@ use these data for request body
   "gender": "M",
   "password":"test@123"
 }
+
+
 // user data 2c
 // ***************************************************************************
 {
@@ -40,12 +43,16 @@ use these data for request body
   "gender": "M",
   "password":"test@123"
 }
+
+
 //login
 // ***************************************************************************
 {
   "emailId": "ankit0bhatia@gmail.com",
   "password": "test@123"
 }
+
+
 // hotel data
 // ***************************************************************************
 {
@@ -88,6 +95,8 @@ use these data for request body
     }
   ]
 }
+
+
 // booking data
 // ***************************************************************************
 {
@@ -101,6 +110,8 @@ use these data for request body
     "numberOfGuests": 5,
     "roomType": "normal"
 }
+
+
 // chat
 // ***************************************************************************
 {
@@ -114,6 +125,8 @@ use these data for request body
     }
   ]
 }
+
+
 // feedback
 // ***************************************************************************
 {
