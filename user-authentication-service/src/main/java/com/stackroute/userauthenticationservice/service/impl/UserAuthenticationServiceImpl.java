@@ -67,7 +67,7 @@ public class UserAuthenticationServiceImpl implements UserDetailsService, UserAu
             // generating the token
             return jwtUtil.generateToken(userCredentials);
         } catch (Exception e) {
-            throw new UsernameNotFoundException("User not found");
+            throw new UsernameNotFoundException("Enter the correct credentials");
         }
     }
 

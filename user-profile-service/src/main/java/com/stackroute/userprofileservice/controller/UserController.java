@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 
 
-
 @ApiOperation(value = "/registration", tags = "User Registration Controller")
 @RestController
 @RequestMapping("/registration")
@@ -36,9 +35,10 @@ public class UserController {
 
     /**
      * This endpoint allows to Add new User.
+     *
      * @author Swastika Shanker
      */
-    @ApiOperation(value = "Register user and generate otp.", response = String.class)
+    @ApiOperation(value = "Register user.", response = String.class)
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "CREATED ", response = String.class),
             @ApiResponse(code = 404, message = "NOT FOUND !!", response = String.class),
@@ -49,7 +49,7 @@ public class UserController {
     public ResponseEntity<String> addUser(@RequestBody @Valid Users user) throws UserFoundException {
         try {
             userService.saveUser(user);
-            return new ResponseEntity<>("Otp Sent successfully.Kindly verify to complete registration.", HttpStatus.CREATED);
+            return new ResponseEntity<>("User added with: " + user.getUserId() + " ID", HttpStatus.CREATED);
         } catch (UserFoundException exception) {
             return new ResponseEntity<>(exception.getMessage(), HttpStatus.CONFLICT);
         }
@@ -57,6 +57,7 @@ public class UserController {
 
     /**
      * This endpoint allows to fetch the records of Users from the Database.
+     *
      * @author Swastika Shanker
      */
 
@@ -67,12 +68,12 @@ public class UserController {
             @ApiResponse(code = 500, message = "INTERNAL SERVER ERROR", response = String.class)
     })
     @GetMapping("/users")
-    public ResponseEntity<List<Users>> getUsers() throws UserNotFoundException{
+    public ResponseEntity<List<Users>> getUsers() throws UserNotFoundException {
 
 
         try {
             List<Users> list = userService.getAllUsers();
-            responseEntity= ResponseEntity.status(HttpStatus.OK).body(list);
+            responseEntity = ResponseEntity.status(HttpStatus.OK).body(list);
         } catch (UserNotFoundException e) {
             responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (Exception e) {
@@ -81,7 +82,6 @@ public class UserController {
         return responseEntity;
 
     }
-
 
 
     @ApiOperation(value = "Display record of user by Id.", response = String.class)
@@ -97,11 +97,11 @@ public class UserController {
      */
 
     @GetMapping("/users/{id}")
-    public ResponseEntity<Users> getUserById(@PathVariable("id") int id)  throws UserNotFoundException {
+    public ResponseEntity<Users> getUserById(@PathVariable("id") int id) throws UserNotFoundException {
 
         try {
-           Users user= userService.getUserById(id);
-           responseEntity= ResponseEntity.status(HttpStatus.OK).body(user);
+            Users user = userService.getUserById(id);
+            responseEntity = ResponseEntity.status(HttpStatus.OK).body(user);
         } catch (UserNotFoundException e) {
             responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (Exception e) {
@@ -111,7 +111,6 @@ public class UserController {
 
 
     }
-
 
 
     @ApiOperation(value = "Delete record of user by Id.", response = String.class)
@@ -128,19 +127,17 @@ public class UserController {
 
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?>  deleteUser(@PathVariable int id) throws UserNotFoundException {
+    public ResponseEntity<?> deleteUser(@PathVariable int id) throws UserNotFoundException {
         try {
-           userService.deleteUser(id);
+            userService.deleteUser(id);
             responseEntity = new ResponseEntity<>("Successfully deleted!!!!", HttpStatus.OK);
         } catch (UserNotFoundException e) {
-            responseEntity=new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+            responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             responseEntity = new ResponseEntity<>("Error try after sometime", HttpStatus.INTERNAL_SERVER_ERROR);
         }
         return responseEntity;
     }
-
-
 
 
     @ApiOperation(value = "Update record of user by Id.", response = String.class)
@@ -155,12 +152,12 @@ public class UserController {
      */
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?>  updateUser(@RequestBody Users user, @PathVariable("id") int id) throws UserNotFoundException {
+    public ResponseEntity<?> updateUser(@RequestBody Users user, @PathVariable("id") int id) throws UserNotFoundException {
         try {
             userService.updateUser(user, id);
             responseEntity = new ResponseEntity<>("Successfully updated!!!!", HttpStatus.OK);
         } catch (UserNotFoundException e) {
-            responseEntity=new ResponseEntity<>(e.getMessage(),HttpStatus.NOT_FOUND);
+            responseEntity = new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         } catch (Exception e) {
             responseEntity = new ResponseEntity<>("Error try after sometime", HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -168,10 +165,9 @@ public class UserController {
     }
 
 
-
-
     /**
      * This method allows to handle exceptions.
+     *
      * @author Swastika Shanker
      */
     @ResponseStatus(HttpStatus.BAD_REQUEST)

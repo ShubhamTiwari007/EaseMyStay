@@ -11,14 +11,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @ToString
 @Document
 public class Address {
-
-    private String city ;
-    private String state ;
-    private String country ;
+    private String city;
+    private String state;
+    private String country;
     private String pincode;
-
-
-
-
-
 }

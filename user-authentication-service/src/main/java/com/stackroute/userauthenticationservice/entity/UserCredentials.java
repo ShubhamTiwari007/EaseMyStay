@@ -11,6 +11,7 @@ import javax.persistence.OneToOne;
 @Setter
 @NoArgsConstructor
 @Entity
+@ToString
 public class UserCredentials {
 
     @Id

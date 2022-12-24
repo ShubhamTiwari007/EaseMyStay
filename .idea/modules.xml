@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EaseMyStay.iml" filepath="$PROJECT_DIR$/EaseMyStay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-gateway/api-gateway.iml" filepath="$PROJECT_DIR$/api-gateway/api-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat-service/chat-service.iml" filepath="$PROJECT_DIR$/chat-service/chat-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/email-service/email-service.iml" filepath="$PROJECT_DIR$/email-service/email-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feedback-service/feedback-service.iml" filepath="$PROJECT_DIR$/feedback-service/feedback-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-booking-service/hotel-booking-service.iml" filepath="$PROJECT_DIR$/hotel-booking-service/hotel-booking-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-property-service/hotel-property-service.iml" filepath="$PROJECT_DIR$/hotel-property-service/hotel-property-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/payment-service/payment-service.iml" filepath="$PROJECT_DIR$/payment-service/payment-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-authentication-service/user-authentication-service.iml" filepath="$PROJECT_DIR$/user-authentication-service/user-authentication-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-profile-service/user-profile-service.iml" filepath="$PROJECT_DIR$/user-profile-service/user-profile-service.iml" />
+    </modules>
+  </component>
+</project>

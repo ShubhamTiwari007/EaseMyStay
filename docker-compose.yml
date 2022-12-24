@@ -175,20 +175,6 @@ services:
     networks:
       - giftnetwork
 
-  sms-service:
-    container_name: sms-service
-    build: sms-service/
-    hostname: localhost
-    ports:
-      - 9007:9007
-    depends_on:
-      - eureka-server
-      - config-server
-      - rabbitmq
-    restart: always
-    networks:
-      - giftnetwork
-
 
   feedback-service:
     container_name: feedback-service
