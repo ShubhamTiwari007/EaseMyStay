@@ -11,7 +11,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 /**
- * This class is responsible to receive the payload via RabbitMq and perform CRUD operation to the PostgreSQL DB
+ * This class is responsible for receving the payload via RabbitMq and perform CRUD operation to the PostgreSQL DB
  */
 @Component
 @Generated
