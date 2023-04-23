@@ -30,7 +30,7 @@ public class RabbitConsumer {
     private PasswordEncoder passwordEncoder;
 
 
-    private static final String QUEUE_TO_SAVE_USER = "queue_to_save_user";
+    private static final String QUEUE_TO_SAVE_USER = "queue_to_save_user_data";
     private static final String QUEUE_TO_UPDATE_USER = "queue_to_update_user";
     private static final String QUEUE_TO_DELETE_USER = "queue_to_delete_user";
 

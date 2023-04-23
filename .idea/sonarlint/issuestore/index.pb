@@ -25,12 +25,8 @@ huser-profile-service/src/test/java/com/stackroute/userprofileservice/controller
 cuser-profile-service/src/main/java/com/stackroute/userprofileservice/repository/UserRepository.java,2/7/27ea647f3671fd519d6fc86d20f8834e76f00529
 ’
 buser-profile-service/src/test/java/com/stackroute/userprofileservice/service/UserServiceTests.java,a/b/ab30089e0ce4aa0b13bcc4ba1ef50c7014418db0
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
 ž
 nuser-authentication-service/src/main/java/com/stackroute/userauthenticationservice/entity/UserCredentials.java,7/9/794b07b2d908f3348d7fd77e7561a4a2f69d360a
-ž
-nuser-authentication-service/src/main/java/com/stackroute/userauthenticationservice/service/RabbitConsumer.java,6/f/6fc0fd15421ec01c890723e207f04100e18c2ce3
 ‘
 auser-profile-service/src/main/java/com/stackroute/userprofileservice/service/UserServiceImpl.java,3/7/3700fe23a0fa7b37b3cf30429ad51706c255847e
 ¯

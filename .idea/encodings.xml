@@ -10,7 +10,6 @@
     <file url="file://$PROJECT_DIR$/hotel-booking-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hotel-property-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/payment-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/sms-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-authentication-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-profile-service/src/main/java" charset="UTF-8" />
   </component>
